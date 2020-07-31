@@ -17,6 +17,7 @@ async function bootstrap() {
   });
 
   app.engine('hbs', hbs.engine);
+  app.set('view options', { layout: false });
   app.setViewEngine('hbs');
   app.useStaticAssets(join(__dirname, '. .', 'public'));
 

@@ -21,7 +21,7 @@ export class CategoryController {
   async category_list(): Promise<Category[]> {
     const categories = await this.categoryRepo.find()
     console.log(categories)
-    return {layout: false, categories}
+    return categories
     }
 
 @Get('create')
